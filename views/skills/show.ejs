@@ -7,13 +7,7 @@
     <title>Express Dev Skills Lab</title>
 </head>
 <body>
-    <h1>Skills</h1>
-    <ul>
-      <% skills.forEach(function(s) { %>
-        <li>
-            <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-        </li>
-      <% }); %>
-    </ul>
-</body>
+    <h3><%= skills.skill %></h3>
+    <h3>Have Learned: <%= skills.know ? 'Yes' : 'No' %></h3>
+  </body>
 </html>

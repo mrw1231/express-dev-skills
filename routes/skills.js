@@ -1,4 +1,5 @@
 var express = require('express');
+const skills = require('../controllers/skills.js');
 var router = express.Router();
 
 // Require the controller that exports skills CRUD functions
@@ -13,6 +14,12 @@ router.get('/new', skillsCtrl.new);
 // GET /skills/:id
 router.get('/:id', skillsCtrl.show);
 // POST /skills
-router.post('/', skillsCtrl.create);
+router.post('/', skillsCtrl.create); 
+// DELETE /skills/:id
+router.delete('/:id', skillsCtrl.delete);
+// GET /skills/:id/edit
+router.get('/:id/edit', skillsCtrl.edit);
+// PUT /skills/:id
+router.put('/:id', skillsCtrl.update);
 
 module.exports = router;

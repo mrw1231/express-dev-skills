@@ -9,11 +9,17 @@
 </head>
 <body>
     <h1>Skills</h1>
-    <a class="nav-link" href="/skills/new">Add To-Do</a>
+    <a class="nav-link" href="/skills/new">Add Skill</a>
     <ul>
       <% skills.forEach(function(s) { %>
         <li>
             <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+             - 
+             <%= s.know ? 'Know' : 'Need to learn' %></td>
+            <form action="/skills/<%= s.id %>?_method=DELETE"
+                id="delete-form" method="POST">
+                <button type="submit">Remove</button>
+            </form>
         </li>
       <% }); %>
     </ul>

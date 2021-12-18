@@ -11,7 +11,7 @@
   <h1>Edit Skill</h1>
   <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
     <input type="text" name="skill" value="<%= skill.skill %>">
-    <input type="checkbox" name="done" <%= skill.know ? 'checked' : '' %>>
+    Know<input type="checkbox" name="know" <%= skill.know ? 'checked' : '' %>>
     <button type="submit">Save Skill</button>
   </form>
 </body>
